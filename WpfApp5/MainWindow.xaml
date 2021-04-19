@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="true">
+            <ToolBarTray DockPanel.Dock="Right" Orientation="Vertical">
+                <ToolBar>
+                    <Button Name ="schwarz" Click="schwarz_Click">schwarz</Button>
+                    <Button Name ="blau" Click="blau_Click">blau</Button>
+                    <Button Name ="rot" Click="rot_Click">rot</Button>
+                    <Button Name ="grün" Click="grün_Click">grün</Button>
+                    <ListBox Name ="pinselstaerken">
+                        <ListBoxItem Name ="p1" Selected="p1_Selected">Pinselgr1</ListBoxItem>
+                        <ListBoxItem Name ="p2" Selected="p2_Selected">Pinselgr2</ListBoxItem>
+                        <ListBoxItem Name ="p3" Selected="p3_Selected">Pinselgr3</ListBoxItem>
+                    </ListBox>
+                    <RadioButton Name ="stift" Checked="stift_Checked">Pinsel</RadioButton>
+                    <RadioButton Name ="radierer" Checked="radierer_Checked">Radiergummi</RadioButton>
+                    <Button Name="speichern" Click="speichern_Click">speichern</Button>
+                </ToolBar>
+            </ToolBarTray>
+
+            <InkCanvas Name="canvas" />
+
+        </DockPanel>
+    </Grid>
+</Window>
